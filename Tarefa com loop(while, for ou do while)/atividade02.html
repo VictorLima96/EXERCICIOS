@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutamento da Empresa</title>
+</head>
+<body>
+    <h1>Recrutamento da Empresa</h1>
+    <div id="recrut"></div>
+    <script>
+        let candidato = 1;
+        let nome = "";
+        let idade = "";
+        let sexo = "";
+        let expProf = "";
+        let media_idade = parseInt (idade / 6);
+        let total_cand = "";
+        let mostrar = "";
+        
+        while (candidato == 1) {
+            nome = prompt("Qual o nome do candidato.");
+            idade = prompt("Digite a idade do candidato.");
+            sexo = prompt("Qual o sexo deste candidato?");
+            expProf = prompt("Tem experiencia Profissional? Sim ou Não?");
+            candidato = prompt("Digite 1 para cadastrar um candidato e 0 para terminar o cadastro."); 
+            mostrar += nome;
+    }
+        document.getElementById("recrute").innerHTML = mostrar;
+    </script>
+</body>
+</html>
