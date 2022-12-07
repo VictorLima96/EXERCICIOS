@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutamento da Empresa</title>
+</head>
+<body>
+
+    <h1>Totais</h1>
+    <div id="media"></div>
+    <h1>Registros de Candidatos</h1>
+    <div id="candidatos"></div>
+
+    <script>
+       let cadastro = 1;
+    let quantidade = 0;
+    let numero = "";
+    let idade;
+    let idade2 = 0;
+    let media = 0;
+    let sexo = "";
+    let exp = "";
+    let homem = 0;
+    let mulher = 0;
+
+    while (cadastro == 1) {
+    numero = prompt("Digite o número do candidato.");
+    idade = prompt("Digite a idade do candidato.");
+    sexo = prompt("Digite (0 para homem e 1 para mulher).");
+    exp = prompt("Digite se tem experiência profissional (sim/não).");
+
+    if (idade != 0) {
+    quantidade++;
+    idade2 +=+ idade;
+    media = parseInt(idade2 / quantidade);
+    }
+     if (sexo === "0") {
+        homem++;
+        sexo = "0"; 
+    }else{  
+        sexo = "1";
+        mulher++;  
+    }
+    if (idade >= 18 && exp == "sim") { 
+            document.getElementById("candidatos").innerHTML += "Número do candidato: " + numero + "</br>" + "Idade: " + idade + "</br>" + "Sexo: " + sexo + "</br>" +"Experiência: " +  exp + "</br></br>" ;
+        }else{       
+        }      
+        cadastro = prompt ("Digite 1 para um novo cadastro e 0 para sair.")        
+            document.getElementById("media").innerHTML = "Idade Média: " + media + "</br>Quantidade de Candidatos Totais: " + quantidade + "</br>Número de Candidatos: " + homem + "</br>" + "Número de Candidatas: " + mulher;
+    }
+    </script>
+</body>
+</html>

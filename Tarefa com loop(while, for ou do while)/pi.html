@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho de Classe</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <h1>Conselho de Classe</h1>
+    <p>Alunos que estão no conselho de classe.</p>
+    </br>
+    <div id="totais"></div>
+    </br>
+    <p>Alunos Aprovados na Primeira etapa.</p>
+    </br>
+    <div id="aprovado"></div>
+    </br>
+    <p>Alunos Reprovados na Primeira etapa.</p> 
+    </br>
+    <div id="reprovado"></div>
+    </br>
+    <p id="demo"></p>
+    </br>
+    <script>
+    const pessoas = new Array("Raphael Vieira N° 1 </br>" + "Samuel N° 2 </br>" + "Victor Lima N° 3 </br>");
+    let numero1 = 0;
+    let numero2 = 0;
+    let alunos = 0;
+    let aprovados;
+    let pessoas1 = ""
+
+    while (alunos <= 2) {
+        let aluno = Number(prompt("Digite o número do aluno."));
+        let pessoas1 = prompt("Digite o nome do aluno");
+        let cdc = Number(prompt("Digite 1 para aprovada e 2 para reprovada."));
+      
+    if (cdc == 1) {
+        numero1++;
+        aprovados = numero1;
+        alunos++;
+        document.getElementById("aprovado").innerHTML += "Alunos aprovados: N° " + alunos + pessoas1 + "</br>";
+    }else{
+        numero2++;
+        alunos++;
+        reprovados = numero2;
+        document.getElementById("reprovado").innerHTML += "Alunos reprovados: N° " + alunos + pessoas1 + "</br>";
+    }
+}
+    let int = Number(prompt("Matricula do aluno"));
+document.getElementById("totais").innerHTML = " Aprovados: " + aprovados + "</br>" + "Reprovados: " + reprovados;
+document.getElementById("demo").innerHTML = "Alunos reprovados: " +  pessoas[int];
+    </script>   
+</body>
+</html>
